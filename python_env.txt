@@ -1,1 +1,10 @@
+
+# To activate environment for python 3 rendition use command below
 source data_script_p3/bin/activate
+
+
+# To activate environment for python 2 rendition use command below
+conda activate data_script_p2 
+
+
+
