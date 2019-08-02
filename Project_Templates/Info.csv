@@ -1,35 +1,35 @@
 Project Workbook Information,
 ,
-"The project workbook allows project managers, team members, sponsors, and stakeholders to easily track and monitor project activities. Any of these worksheets can easily be broken out into separate documents.",
+The project workbook allows project managers team members sponsors and stakeholders to easily track and monitor project activities. Any of these worksheets can easily be broken out into separate documents.,
 ,
 Suggested Sheets for All Projects,
 Data,Filling out the Data sheet completes the header portion of all remaining sheets in the project workbook.
 Minicharter,The Project Minicharter sheet can be used as a charter for small projects or a summarization of a full charter for larger projects.
-Stoplight,"The Stoplight Report sheet contains a status report that can be used to keep sponsors, team members, and stakeholders informed of project progress."
-Budget,"The Budget sheet allows you to track original budget, expenditures to date, and any cost variance."
+Stoplight,The Stoplight Report sheet contains a status report that can be used to keep sponsors team members and stakeholders informed of project progress.
+Budget,The Budget sheet allows you to track original budget expenditures to date and any cost variance.
 CBA,The Cost/Benefit Analysis sheet allows you to review the proposed project and potential alternatives and make a project selection based on a greater ROI (return on investment).
-Risks,"The Risk Management Matrix sheet allows you to identify, qualify, quantify, and prioritize risks (events that might happen; the uncertainty of a project), create mitigation and contingency plans, and assign risks owners."
+Risks,The Risk Management Matrix sheet allows you to identify qualify quantify and prioritize risks (events that might happen; the uncertainty of a project) create mitigation and contingency plans and assign risks owners.
 Issues,The Issues Log sheet allows you to identify and monitor project issues (unplanned events that have happened).
 Action,The Action Items sheet allows you to track and monitor action items assigned to team members. Action items are tasks that must be done but are too insignificant from a time perspective to track in your project schedule.
-Miles,"The Deliverable Milestones sheet allows you to identify major deliverable milestones and the due dates, objectives, assumptions, and constraints relevant to that deliverable milestone."
-WBS,"The Work Breakdown Structure sheet includes the activities that must be completed during a project, the effort required, all relevant dates, and the resources assigned to do the work."
+Miles,The Deliverable Milestones sheet allows you to identify major deliverable milestones and the due dates objectives assumptions and constraints relevant to that deliverable milestone.
+WBS,The Work Breakdown Structure sheet includes the activities that must be completed during a project the effort required all relevant dates and the resources assigned to do the work.
 Roster,The Roster sheet provides contact information for all those involved on the project.
-R&R,"The Roles and Responsibilities sheet shows the primary role of team members, any deliverables in which they are involved, and the percentage of time they are expected to work on the project."
-RAM,"The Resource Assignment Matrix sheet shows you what type of resource is responsible for, or somehow involved with, each deliverable. The tasks listed are samples; you should update the RAM with tasks appropriate for your project."
+R&R,The Roles and Responsibilities sheet shows the primary role of team members any deliverables in which they are involved and the percentage of time they are expected to work on the project.
+RAM,The Resource Assignment Matrix sheet shows you what type of resource is responsible for or somehow involved with each deliverable. The tasks listed are samples; you should update the RAM with tasks appropriate for your project.
 RCM,The Resource Commitment Matrix sheet shows how many effort hours each person on the project has been allocated by month.
 A&C,The Assumptions and Constraints sheet allows you to track project assumptions and constraints.
 Decision,The Decision Log sheet allows you to track all major decisions made during the course of the project.
-Comm,"The Communication Plan sheet allows you to detail your communication plan: how you are going to communicate, whom you will be communicating with, how often, in what format, etc."
-Stake,"The Stakeholder Analysis sheet allows you to identify stakeholders, their role, and their requirements."
+Comm,The Communication Plan sheet allows you to detail your communication plan: how you are going to communicate whom you will be communicating with how often in what format etc.
+Stake,The Stakeholder Analysis sheet allows you to identify stakeholders their role and their requirements.
 Expectations,The Expectations sheet allows you to identify and track the expectations of various stakeholders.
 Chg Log,The Change Control Log sheet allows you to track all change requests that are in process or finalized.
 Deliver,The Deliverable Acceptance Log sheet allows you to track the status of deliverable acceptances.
 PERT,The PERT Analysis sheet allows you to perform PERT analysis on WBS tasks.
 Delphi,The Delphi Exercise sheet allows you to develop estimates for WBS tasks through the Delphi technique.
 TimeSum,The Timesheet Totals sheet allows you to track effort hours of your entire team by individual and by month.
-Timesheet,"The Timesheet can be used by each team member to submit effort hours by activity, by month."
-Size Est,"The Initial Project Size Estimate sheet allows you to estimate, at high-levels (40,000 ft. view), the size of a project. This estimate should not be considered final as requirements and technical specifications typically have not been fully developed yet."
-Res Load,"The Resource Loading sheet allows you to identify the work effort required, the duration, and the allowed commitment level of each person assigned to the project. "
-Qual Metrics,"The Project Quality Metrics sheet allows you to identify critical success criteria, related quality metrics, and their priority. "
+Timesheet,The Timesheet can be used by each team member to submit effort hours by activity by month.
+Size Est,The Initial Project Size Estimate sheet allows you to estimate at high-levels (40000 ft. view) the size of a project. This estimate should not be considered final as requirements and technical specifications typically have not been fully developed yet.
+Res Load,The Resource Loading sheet allows you to identify the work effort required the duration and the allowed commitment level of each person assigned to the project.
+Qual Metrics,The Project Quality Metrics sheet allows you to identify critical success criteria related quality metrics and their priority.
 ,
 ,Source: www.iappm.org
