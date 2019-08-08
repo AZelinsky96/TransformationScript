@@ -19,8 +19,12 @@ with open(file, "r") as f:
 
 #print xml_string
 
+import xml.dom.minidom
 
+dom = xml.dom.minidom.parse(file) # or xml.dom.minidom.parseString(xml_string)
+pretty_xml_as_string = dom.toprettyxml()
 
+print pretty_xml_as_string
 
 def make_dict_from_tree(element_tree):
     """Traverse the given XML element tree to convert it into a dictionary.
