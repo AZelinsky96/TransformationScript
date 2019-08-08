@@ -13,16 +13,39 @@ import warnings
 
 
 class FileLoader:
+    """
+    This class will handle all interactions for parsing, splitting, and flattening files.
+    This is instatianted in main and main is executed.
+    """
+
     def __init__(self):
+        ## Input file in instatiantion is the the last system argument passed to the command line
         self.file = sys.argv[-1].strip()
 
+
     def LoadFile(self):
+        """
+        This method will find the file type of the input file, and search if the file is not located within the current directory.
+        If the file is not located within the current directory, there is an option to search the subdirectories from the current to see if the file is there.
+        """
+        def finder(name, path):
+            """
+            The function to search the directories for presence of file.
+            """
+            for root, dirs, files in os.walk(path):
+                if name in files:
+                    return os.path.join(root, name)
+
+
         self.file_type = self.file.split(".")[-1]
         print "File Entered: %s" %(self.file)
 
         while True:
-            confirm_ = raw_input("Please Confirm the file entered is correct: [y/n]")
+            """
+            Confirmation of file entered.
 
+            """
+            confirm_ = raw_input("Please Confirm the file entered is correct: [y/n]")
 
             if confirm_.lower() == "y":
                 break
@@ -33,26 +56,79 @@ class FileLoader:
                 print("Please enter either [y/n]...\n")
 
 
+        if self.file not in os.listdir(os.getcwd()):
+            """
+            Confirmation of file presence. Will perform search if chosen to do so.
+
+            """
+
+            print "File not in directory.: %s" % (os.getcwd())
+
+            while True:
+
+                find = raw_input("Would you like to search for file? [y/n] ")
+                if find.lower() == "y":
+                    while True:
+                        location_c = str(raw_input("Would you like to search sub directories[1] or enter directory path[2]? - [1/2]: "))
+
+                        if location_c == "1":
+                            file_loc = finder(self.file, os.getcwd())
+                            break
+                        elif location_c == "2":
+
+                            path_ = raw_input("Enter Path to File: ")
+                            if self.file in os.listdir(path_):
+                                file_loc = os.path.join(path_, self.file)
+
+                                break
+
+                            else:
+                                sys.exit("File not found in directory: %s. \nPlease Check directory and it's contents, or move file to current directory.\n" % (path_))
+                        else:
+                            print "Please enter either [1/2] \n"
+
+                    self.file =  file_loc
+
+                    break
+
+                elif find.lower() == "n":
+                    sys.exit("Please move file to current directory")
+                else:
+                    print "Please enter either [y/n]\n"
+
+
+
+
     def MakeDirectory(self):
         base = os.getcwd()
         directory_contents = os.listdir(base)
         folder_name = self.file.split(".")[0]
-        if os.path.isdir(base + "/" + folder_name) == False:
+        print folder_name
+        if os.path.isdir(os.path.join(base,folder_name)) == False:
             os.mkdir(folder_name)
+        folder_name = os.path.join(base, folder_name)
         shutil.copy(self.file, folder_name)
+
         os.chdir(folder_name)
+
+
 
     def FileSplitter(self):
         print "Loading: %s" % (self.file)
+        print self.file_type
         if self.file_type == "xlsx":
             FileLoader.XlsxSplitter(self.file)
         elif self.file_type == "xls":
             FileLoader.XlsSplitter(self.file)
-        elif self.file_type == ".json":
+        elif self.file_type == "json":
             FileLoader.JsonLoader(self.file)
         else:
             print "Please Check Documentation and ensure that data file is compatible with load types."
 
+
+
+
+## Static methods to handle different file inputs
     @staticmethod
     def XlsxSplitter(x):
         import openpyxl as xl
@@ -103,16 +179,82 @@ class FileLoader:
     def JsonLoader(x):
         import json
         print "Parsing Json File."
+        print os.getcwd()
+        file = x
 
-        with open(x , "r") as f:
-            data = json.load(f)
+        global reduced_item
+
+        def to_string(s):
+            try:
+                return str(s)
+            except:
+        #Change the encoding type if needed
+                return s.encode('utf-8')
+
+        def reduce(key, value):
 
 
+            if isinstance(value, list):
+                i = 0
+                for sub in value:
+                    reduce(key+'_'+to_string(i), sub)
+                    i+= 1
+            elif isinstance(value, dict):
+                sub_keys = value.keys()
+                for sub_key in sub_keys:
+                    reduce(key+'_'+to_string(sub_key), value[sub_key])
+            else:
+                reduced_item[to_string(key)] = to_string(value)
+
+
+        if len(file) == 0:
+            sys.exit("Please Enter file.")
+        else:
+
+            fp = open(file, "r")
+            json_value = fp.read()
+            raw_data = json.loads(json_value)
+            fp.close()
+            data_to_be_processed = raw_data
+
+            processed_data = []
+            header = []
+
+            for item in data_to_be_processed:
+                print "Processing %s Branch" % (item)
+                reduced_item = {}
+                node = item
+                reduce(node, data_to_be_processed[item])
+                header += reduced_item.keys()
+
+                processed_data.append(reduced_item)
+
+            header = list(set(header))
+            header.sort()
+            data = {}
+            for i in processed_data:
+                for j,k  in i.iteritems():
+                    data[j] = k
+
+            print data
+
+            with open("%s.csv" % (sys.argv[-1].split(".")[0]), "w+") as f:
+                writer = csv.DictWriter(f, header , quoting = csv.QUOTE_ALL)
+                writer.writeheader()
+                print "Writing Data to CSV"
+                writer.writerow(data)
+                #for row in data:
+                #    writer.writerow(row)
+        @staticmethod
+        def XmlParser(x):
+            print "Loading XML File"
+            
 def main():
 
     fileloader = FileLoader()
     fileloader.LoadFile()
     fileloader.MakeDirectory()
-
     fileloader.FileSplitter()
+
+
 main()

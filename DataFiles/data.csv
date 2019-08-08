@@ -1,0 +1,8 @@
+"$id","$schema","additionalProperties","description","properties_$data_anyOf_0_format","properties_$data_anyOf_1_format","properties_$data_type","required_0","type"
+"","","","Meta-schema for $data reference (JSON Schema extension proposal)","","","","",""
+"https://raw.githubusercontent.com/epoberezkin/ajv/master/lib/refs/data.json#","","","","","","","",""
+"","","","","","","","$data",""
+"","","False","","","","","",""
+"","http://json-schema.org/draft-07/schema#","","","","","","",""
+"","","","","","","","","object"
+"","","","","relative-json-pointer","json-pointer","string","",""

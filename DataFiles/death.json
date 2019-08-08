@@ -1,0 +1,345 @@
+{
+  "meta" : {
+    "view" : {
+      "id" : "mc4y-cbbv",
+      "name" : "NCHS - Top Five Leading Causes of Death: United States, 1990, 1950, 2000",
+      "attribution" : "National Center for Health Statistics",
+      "averageRating" : 0,
+      "category" : "NCHS",
+      "createdAt" : 1436903412,
+      "description" : "This dataset contains information on the number of deaths and age-adjusted death rates for the five leading causes of death in 1900, 1950, and 2000.\r\n\r\nAge-adjusted death rates (deaths per 100,000) after 1998 are calculated based on the 2000 U.S. standard population. Populations used for computing death rates for 2011–2015 are postcensal estimates based on the 2010 census, estimated as of July 1, 2010. Rates for census years are based on populations enumerated in the corresponding censuses. Rates for noncensus years between 2000 and 2010 are revised using updated intercensal population estimates and may differ from rates previously published. Data on age-adjusted death rates prior to 1999 are taken from historical data (see References below). \r\n\r\nSOURCES\r\n\r\nCDC/NCHS, National Vital Statistics System, historical data, 1900-1998 (see https://www.cdc.gov/nchs/nvss/mortality_historical_data.htm); CDC/NCHS, National Vital Statistics System, mortality data (see http://www.cdc.gov/nchs/deaths.htm); and CDC WONDER (see http://wonder.cdc.gov).\r\n\r\nREFERENCES\r\n\r\n1. National Center for Health Statistics, Data Warehouse. Comparability of cause-of-death between ICD revisions. 2008. Available from: http://www.cdc.gov/nchs/nvss/mortality/comparability_icd.htm.\r\n\r\n2. National Center for Health Statistics. Vital statistics data available. Mortality multiple cause files. Hyattsville, MD: National Center for Health Statistics. Available from: https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm.\r\n\r\n3. Murphy SL, Xu JQ, Kochanek KD, Curtin SC, and Arias E. Deaths: Final data for 2015. National vital statistics reports; vol 66. no. 6. Hyattsville, MD: National Center for Health Statistics. 2017. Available from: https://www.cdc.gov/nchs/data/nvsr/nvsr66/nvsr66_06.pdf.\r\n\r\n4. Arias E, Heron M, and Xu JQ. United States life tables, 2014. National vital statistics reports; vol 66 no 4. Hyattsville, MD: National Center for Health Statistics. 2017. Available from: https://www.cdc.gov/nchs/data/nvsr/nvsr66/nvsr66_04.pdf.\r\n\r\n5. National Center for Health Statistics. Historical Data, 1900-1998. 2009. Available from: https://www.cdc.gov/nchs/nvss/mortality_historical_data.htm.",
+      "displayType" : "table",
+      "downloadCount" : 10432,
+      "hideFromCatalog" : false,
+      "hideFromDataJson" : false,
+      "indexUpdatedAt" : 1528117871,
+      "licenseId" : "USGOV_WORKS",
+      "newBackend" : true,
+      "numberOfComments" : 0,
+      "oid" : 26694248,
+      "provenance" : "official",
+      "publicationAppendEnabled" : false,
+      "publicationDate" : 1504108621,
+      "publicationGroup" : 3555348,
+      "publicationStage" : "published",
+      "rowClass" : "",
+      "rowsUpdatedAt" : 1504108454,
+      "rowsUpdatedBy" : "d4v5-xsf4",
+      "tableId" : 14432302,
+      "totalTimesRated" : 0,
+      "viewCount" : 3683,
+      "viewLastModified" : 1528117544,
+      "viewType" : "tabular",
+      "approvals" : [ {
+        "reviewedAt" : 1504108621,
+        "reviewedAutomatically" : true,
+        "state" : "approved",
+        "submissionId" : 740923,
+        "submissionObject" : "public_audience_request",
+        "submissionOutcome" : "change_audience",
+        "submittedAt" : 1504108621,
+        "workflowId" : 2100,
+        "submissionDetails" : {
+          "permissionType" : "READ"
+        },
+        "submissionOutcomeApplication" : {
+          "failureCount" : 0,
+          "status" : "success"
+        },
+        "submitter" : {
+          "id" : "ki96-txhe",
+          "displayName" : "NCHS"
+        }
+      } ],
+      "columns" : [ {
+        "id" : -1,
+        "name" : "sid",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":sid",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "id",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":id",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "position",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":position",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "created_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":created_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_at",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_at",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "updated_meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":updated_meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : -1,
+        "name" : "meta",
+        "dataTypeName" : "meta_data",
+        "fieldName" : ":meta",
+        "position" : 0,
+        "renderTypeName" : "meta_data",
+        "format" : { },
+        "flags" : [ "hidden" ]
+      }, {
+        "id" : 318018021,
+        "name" : "Year",
+        "dataTypeName" : "number",
+        "fieldName" : "year",
+        "position" : 1,
+        "renderTypeName" : "number",
+        "tableColumnId" : 29761646,
+        "width" : 148,
+        "cachedContents" : {
+          "largest" : "2000",
+          "non_null" : 15,
+          "average" : "1950",
+          "null" : 0,
+          "top" : [ {
+            "item" : "1900",
+            "count" : 20
+          }, {
+            "item" : "1950",
+            "count" : 19
+          }, {
+            "item" : "2000",
+            "count" : 18
+          } ],
+          "smallest" : "1900",
+          "sum" : "29250"
+        },
+        "format" : {
+          "precisionStyle" : "standard",
+          "noCommas" : "true",
+          "align" : "right"
+        }
+      }, {
+        "id" : 318018020,
+        "name" : "Cause",
+        "dataTypeName" : "text",
+        "fieldName" : "leading_causes",
+        "position" : 2,
+        "renderTypeName" : "text",
+        "tableColumnId" : 29761645,
+        "width" : 268,
+        "cachedContents" : {
+          "largest" : "Vascular Lesions",
+          "non_null" : 15,
+          "null" : 0,
+          "top" : [ {
+            "item" : "Influenza/Pneumonia",
+            "count" : 20
+          }, {
+            "item" : "Tuberculosis",
+            "count" : 19
+          }, {
+            "item" : "Diarrhea/Enteritis/Ulcerative Colitis",
+            "count" : 18
+          }, {
+            "item" : "Heart Disease",
+            "count" : 17
+          }, {
+            "item" : "Stroke",
+            "count" : 16
+          }, {
+            "item" : "Cancer",
+            "count" : 15
+          }, {
+            "item" : "Vascular Lesions",
+            "count" : 14
+          }, {
+            "item" : "Accidents",
+            "count" : 13
+          }, {
+            "item" : "Certain Diseases of Infancy",
+            "count" : 12
+          }, {
+            "item" : "Chronic Respiratory Diseases",
+            "count" : 11
+          } ],
+          "smallest" : "Accidents"
+        },
+        "format" : {
+          "displayStyle" : "plain",
+          "align" : "left"
+        }
+      }, {
+        "id" : 318018022,
+        "name" : "Number of Deaths",
+        "dataTypeName" : "number",
+        "fieldName" : "number_of_deaths",
+        "position" : 3,
+        "renderTypeName" : "number",
+        "tableColumnId" : 29761647,
+        "width" : 292,
+        "cachedContents" : {
+          "largest" : "710760",
+          "non_null" : 15,
+          "average" : "190886.7333333333",
+          "null" : 0,
+          "top" : [ {
+            "item" : "40362",
+            "count" : 20
+          }, {
+            "item" : "38820",
+            "count" : 19
+          }, {
+            "item" : "28491",
+            "count" : 18
+          }, {
+            "item" : "27427",
+            "count" : 17
+          }, {
+            "item" : "21353",
+            "count" : 16
+          }, {
+            "item" : "535705",
+            "count" : 15
+          }, {
+            "item" : "210733",
+            "count" : 14
+          }, {
+            "item" : "156751",
+            "count" : 13
+          }, {
+            "item" : "91249",
+            "count" : 12
+          }, {
+            "item" : "60989",
+            "count" : 11
+          }, {
+            "item" : "710760",
+            "count" : 10
+          }, {
+            "item" : "553091",
+            "count" : 9
+          }, {
+            "item" : "167661",
+            "count" : 8
+          }, {
+            "item" : "122009",
+            "count" : 7
+          }, {
+            "item" : "97900",
+            "count" : 6
+          } ],
+          "smallest" : "21353",
+          "sum" : "2863301"
+        },
+        "format" : { }
+      } ],
+      "grants" : [ {
+        "inherited" : false,
+        "type" : "viewer",
+        "flags" : [ "public" ]
+      } ],
+      "license" : {
+        "name" : "Public Domain U.S. Government",
+        "termsLink" : "https://www.usa.gov/government-works"
+      },
+      "metadata" : {
+        "rdfSubject" : "0",
+        "rdfClass" : "",
+        "custom_fields" : {
+          "Common Core" : {
+            "Contact Email" : "nchsdata@cdc.gov",
+            "Contact Name" : "National Center for Health Statistics",
+            "Program Code" : "009:020",
+            "Publisher" : "National Center for Health Statistics",
+            "Bureau Code" : "009:00"
+          }
+        },
+        "rowIdentifier" : "0",
+        "rowLabel" : "Row",
+        "availableDisplayTypes" : [ "table", "fatrow", "page" ],
+        "renderTypeConfig" : {
+          "visible" : {
+            "table" : true
+          }
+        }
+      },
+      "owner" : {
+        "id" : "ki96-txhe",
+        "displayName" : "NCHS",
+        "profileImageUrlLarge" : "/api/users/ki96-txhe/profile_images/LARGE",
+        "profileImageUrlMedium" : "/api/users/ki96-txhe/profile_images/THUMB",
+        "profileImageUrlSmall" : "/api/users/ki96-txhe/profile_images/TINY",
+        "screenName" : "NCHS",
+        "type" : "interactive",
+        "flags" : [ "mayBeStoriesCoOwner" ]
+      },
+      "query" : { },
+      "rights" : [ "read" ],
+      "tableAuthor" : {
+        "id" : "ki96-txhe",
+        "displayName" : "NCHS",
+        "profileImageUrlLarge" : "/api/users/ki96-txhe/profile_images/LARGE",
+        "profileImageUrlMedium" : "/api/users/ki96-txhe/profile_images/THUMB",
+        "profileImageUrlSmall" : "/api/users/ki96-txhe/profile_images/TINY",
+        "screenName" : "NCHS",
+        "type" : "interactive",
+        "flags" : [ "mayBeStoriesCoOwner" ]
+      },
+      "tags" : [ "cause of death", "mortality", "united states", "nchs" ],
+      "flags" : [ "default", "restorable", "restorePossibleForType" ]
+    }
+  },
+  "data" : [ [ "row-r7bx~7qkb-8uk6", "00000000-0000-0000-A945-A4D0A4AEA807", 0, 1449078186, null, 1449078186, null, "{ }", "1900", "Tuberculosis", "38820" ]
+, [ "row-btas.exs9-cpxp", "00000000-0000-0000-1975-2F0A05A77E59", 0, 1449078186, null, 1449078186, null, "{ }", "1900", "Influenza/Pneumonia", "40362" ]
+, [ "row-2g2i~ifsm_jxxi", "00000000-0000-0000-F8A7-B3B8007D7C0C", 0, 1449078186, null, 1449078186, null, "{ }", "1950", "Certain Diseases of Infancy", "60989" ]
+, [ "row-gqve_n6vr-w2dz", "00000000-0000-0000-41A6-D6179BB89D89", 0, 1449078186, null, 1449078186, null, "{ }", "1950", "Accidents", "91249" ]
+, [ "row-fu23~knav.n34u", "00000000-0000-0000-FDED-D7559E5DAA50", 0, 1449078186, null, 1449078186, null, "{ }", "2000", "Accidents", "97900" ]
+, [ "row-wcaq-4tkq_jjqj", "00000000-0000-0000-4213-E73FB81F58F4", 0, 1449078186, null, 1449078186, null, "{ }", "2000", "Chronic Respiratory Diseases", "122009" ]
+, [ "row-j4en~f77h_bc3h", "00000000-0000-0000-F597-BED09ED5A534", 0, 1449078186, null, 1449078186, null, "{ }", "2000", "Stroke", "167661" ]
+, [ "row-6tyg~jmgv_8348", "00000000-0000-0000-83CB-FDDF52918124", 0, 1466618536, null, 1466618536, null, "{ }", "1950", "Vascular Lesions", "156751" ]
+, [ "row-nuu5.2m6h_vauh", "00000000-0000-0000-B774-11CAE3872E45", 0, 1466618536, null, 1466618536, null, "{ }", "2000", "Heart Disease", "710760" ]
+, [ "row-pb92.547e~45wb", "00000000-0000-0000-019F-A5D56D58DCFA", 0, 1466618536, null, 1466618536, null, "{ }", "1900", "Diarrhea/Enteritis/Ulcerative Colitis", "28491" ]
+, [ "row-jbbc.ufqb-cp9f", "00000000-0000-0000-64A5-72D92E0BDBD0", 0, 1466618536, null, 1466618536, null, "{ }", "1950", "Cancer", "210733" ]
+, [ "row-yjey.68wj_s3bc", "00000000-0000-0000-8981-576849D7D260", 0, 1466618536, null, 1466618536, null, "{ }", "1950", "Heart Disease", "535705" ]
+, [ "row-hd8g~apsc_8bgi", "00000000-0000-0000-2E94-0C1680E5C366", 0, 1466618536, null, 1466618536, null, "{ }", "1900", "Heart Disease", "27427" ]
+, [ "row-zvqt~t3dx.ppe2", "00000000-0000-0000-0C57-793BDFB0095B", 0, 1466618536, null, 1466618536, null, "{ }", "2000", "Cancer", "553091" ]
+, [ "row-hx9r-nr9p-uvqf", "00000000-0000-0000-193F-4C12C02CCFF4", 0, 1466618536, null, 1466618536, null, "{ }", "1900", "Stroke", "21353" ]
+ ]
+}
