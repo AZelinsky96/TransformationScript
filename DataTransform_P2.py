@@ -116,12 +116,15 @@ class FileLoader:
     def FileSplitter(self):
         print "Loading: %s" % (self.file)
         print self.file_type
+
         if self.file_type == "xlsx":
             FileLoader.XlsxSplitter(self.file)
         elif self.file_type == "xls":
             FileLoader.XlsSplitter(self.file)
         elif self.file_type == "json":
             FileLoader.JsonLoader(self.file)
+        elif self.file_type == "xml":
+            FileLoader.XmlParser(self.file)
         else:
             print "Please Check Documentation and ensure that data file is compatible with load types."
 
@@ -192,8 +195,6 @@ class FileLoader:
                 return s.encode('utf-8')
 
         def reduce(key, value):
-
-
             if isinstance(value, list):
                 i = 0
                 for sub in value:
@@ -236,25 +237,118 @@ class FileLoader:
                 for j,k  in i.iteritems():
                     data[j] = k
 
-            print data
+            #print data
 
             with open("%s.csv" % (sys.argv[-1].split(".")[0]), "w+") as f:
                 writer = csv.DictWriter(f, header , quoting = csv.QUOTE_ALL)
                 writer.writeheader()
                 print "Writing Data to CSV"
                 writer.writerow(data)
-                #for row in data:
-                #    writer.writerow(row)
-        @staticmethod
-        def XmlParser(x):
-            print "Loading XML File"
-            
+
+
+    @staticmethod
+    def XmlParser(x):
+        import xml.etree.ElementTree
+        global reduced_item
+
+        def internal_iter(tree, accum):
+            """Recursively iterate through the elements of the tree accumulating
+                a dictionary result.
+
+                :param tree: The XML element tree
+                :type tree: xml.etree.ElementTree
+                :param accum: Dictionary into which data is accumulated
+                :type accum: dict
+                :rtype: dict
+            """
+            if tree is None:
+                return accum
+
+            if tree.getchildren():
+                accum[tree.tag] = {}
+                for each in tree.getchildren():
+                    result = internal_iter(each, {})
+                    if each.tag in accum[tree.tag]:
+                        if not isinstance(accum[tree.tag][each.tag], list):
+                            accum[tree.tag][each.tag] = [
+                                accum[tree.tag][each.tag]
+                            ]
+                        accum[tree.tag][each.tag].append(result[each.tag])
+                    else:
+                        accum[tree.tag].update(result)
+            else:
+                accum[tree.tag] = tree.text
+
+            return accum
+
+
+        def DictParser(data_to_be_processed):
+            def to_string(s):
+                try:
+                    return str(s)
+                except:
+                    return s.encode('utf-8')
+
+            def reduce(key, value):
+                if isinstance(value, list):
+                    i = 0
+                    for sub in value:
+                        reduce(key+'_'+to_string(i), sub)
+                        i+= 1
+                elif isinstance(value, dict):
+                    sub_keys = value.keys()
+                    for sub_key in sub_keys:
+                        reduce(key+'_'+to_string(sub_key), value[sub_key])
+                else:
+                    reduced_item[to_string(key)] = to_string(value)
+
+
+
+
+            processed_data = []
+            header = []
+
+            for item in data_to_be_processed:
+                print "Processing %s Branch" % (item)
+                reduced_item = {}
+                node = item
+                reduce(node, data_to_be_processed[item])
+                header += reduced_item.keys()
+
+                processed_data.append(reduced_item)
+
+            header = list(set(header))
+            header.sort()
+            data = {}
+            for i in processed_data:
+                for j,k  in i.iteritems():
+                    data[j] = k
+            #print data
+            with open("%s.csv" % (sys.argv[-1].split(".")[0]), "w+") as f:
+                writer = csv.DictWriter(f, header , quoting = csv.QUOTE_ALL)
+                writer.writeheader()
+                print "Writing Data to CSV"
+                writer.writerow(data)
+
+
+        print "Loading XML File"
+
+        with open(x, "r") as f:
+            xml_string = f.read()
+
+
+        data_to_be_processed = internal_iter(xml.etree.ElementTree.fromstring(xml_string), {})
+        DictParser(data_to_be_processed)
+
+
+
 def main():
 
     fileloader = FileLoader()
     fileloader.LoadFile()
     fileloader.MakeDirectory()
     fileloader.FileSplitter()
+
 
 
 main()
