@@ -1,5 +1,5 @@
 import xml.etree.ElementTree
-import os
+import os 
 
 os.chdir(r"C:\Python26\xmlfiles")
 directory = os.listdir(os.getcwd())
