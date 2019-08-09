@@ -1,4 +1,4 @@
-# DEVELOPMENT PURPOSE
+# DEVELOPMENT PURPOSE 
 
 # To activate environment for python 2 rendition use command below
 conda activate data_script_p2 
